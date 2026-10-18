@@ -10,74 +10,16 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<main class="card">
+  <button id="themeBtn" class="theme" aria-label="สลับธีม">🌙</button>
 
-<header class="topbar">
-  <span class="brand">&lt;/&gt; Web Dev Lab</span>
-  <nav>
-    <a href="#about">About Me</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <button id="themeBtn" class="icon-btn" aria-label="สลับธีม">🌙</button>
-</header>
-
-<main>
-  <section class="hero">
-    <div class="avatar">กต</div>
-    <h1>My Web Development Lab</h1>
-    <p class="who">ชื่อ: กิตติทัต สายแสงจันทร์ | รหัสนิสิต: 67160155</p>
-    <p id="status" class="status">Ready to deploy</p>
-    <div class="actions">
-      <button id="helloBtn">Say Hello</button>
-      <a class="ghost" href="#contact">ติดต่อฉัน</a>
-    </div>
-    <span class="badge">🚀 Deployed automatically with GitHub Actions</span>
-  </section>
-
-  <section id="about" class="block">
-    <h2>About Me</h2>
-    <div class="card">
-      <p>สวัสดีครับ ผมเป็นนิสิตที่กำลังเรียนรู้การพัฒนาเว็บไซต์
-      แลปนี้ผมได้ฝึกใช้ Git และ GitHub เพื่อเก็บโค้ด
-      เขียน GitHub Actions เพื่อ deploy เว็บอัตโนมัติ
-      และเผยแพร่เว็บไซต์ผ่าน GitHub Pages</p>
-      <ul class="facts">
-        <li><b>3</b><span>ไฟล์หลัก</span></li>
-        <li><b>1</b><span>Workflow</span></li>
-        <li><b>0</b><span>ขั้นตอน deploy ด้วยมือ</span></li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="skills" class="block">
-    <h2>Skills</h2>
-    <div class="skills">
-      <div class="skill"><div class="row"><span>HTML</span><span>80%</span></div><div class="bar"><i style="--w:80%"></i></div></div>
-      <div class="skill"><div class="row"><span>CSS</span><span>70%</span></div><div class="bar"><i style="--w:70%"></i></div></div>
-      <div class="skill"><div class="row"><span>JavaScript</span><span>60%</span></div><div class="bar"><i style="--w:60%"></i></div></div>
-      <div class="skill"><div class="row"><span>Git &amp; GitHub</span><span>65%</span></div><div class="bar"><i style="--w:65%"></i></div></div>
-      <div class="skill"><div class="row"><span>GitHub Actions</span><span>50%</span></div><div class="bar"><i style="--w:50%"></i></div></div>
-    </div>
-  </section>
-
-  <section id="contact" class="block">
-    <h2>Contact</h2>
-    <div class="contacts">
-      <a class="card link" href="mailto:67160155@go.buu.ac.th">
-        <span class="ico">✉️</span><b>Email</b><small>67160155@go.buu.ac.th</small>
-      </a>
-      <a class="card link" href="https://github.com/67160155" target="_blank" rel="noopener">
-        <span class="ico">🐙</span><b>GitHub</b><small>github.com/67160155</small>
-      </a>
-      <div class="card">
-        <span class="ico">🎓</span><b>มหาวิทยาลัยบูรพา</b><small>รหัสนิสิต 67160155</small>
-      </div>
-    </div>
-  </section>
+  <div class="avatar">กต</div>
+  <h1>My Web Development Lab</h1>
+  <p class="who">ชื่อ: กิตติทัต สายแสงจันทร์ <span>|</span> รหัสนิสิต: 67160155</p>
+  <p id="status">Ready to deploy</p>
+  <button id="helloBtn">Say Hello</button>
+  <p class="foot">🚀 Deployed automatically with GitHub Actions</p>
 </main>
-
-<footer>© 2026 กิตติทัต สายแสงจันทร์ · สร้างด้วย HTML, CSS, JavaScript</footer>
-
 <script src="script.js"></script>
 </body>
 </html>

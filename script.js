@@ -1,9 +1,9 @@
 const root = document.documentElement;
 const themeBtn = document.querySelector('#themeBtn');
-const statusEl = document.querySelector('#status');
 const helloBtn = document.querySelector('#helloBtn');
+const statusEl = document.querySelector('#status');
 
-/* --- Toggle Theme (จำค่าไว้ในเบราว์เซอร์) --- */
+/* สลับธีม Dark / Light (จำค่าไว้) */
 function applyTheme(theme) {
   root.setAttribute('data-theme', theme);
   themeBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
@@ -20,7 +20,7 @@ themeBtn.addEventListener('click', () => {
   try { localStorage.setItem('theme', next); } catch (e) {}
 });
 
-/* --- Say Hello (เปลี่ยนข้อความ) --- */
+/* ปุ่ม Say Hello เปลี่ยนข้อความ */
 const messages = [
   'Hello from GitHub Pages!',
   'Deployed by GitHub Actions ✅',
@@ -30,14 +30,7 @@ let i = 0;
 helloBtn.addEventListener('click', () => {
   statusEl.textContent = messages[i % messages.length];
   i++;
+  statusEl.classList.remove('pop');
+  void statusEl.offsetWidth;      // รีสตาร์ทแอนิเมชัน
+  statusEl.classList.add('pop');
 });
-
-/* --- แถบ Skills เลื่อนขึ้นเมื่อเลื่อนมาถึง --- */
-const skills = document.querySelector('.skills');
-if ('IntersectionObserver' in window) {
-  new IntersectionObserver((entries, obs) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); obs.unobserve(e.target); } });
-  }, { threshold: 0.3 }).observe(skills);
-} else {
-  skills.classList.add('show');
-}
